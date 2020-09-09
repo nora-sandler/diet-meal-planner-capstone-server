@@ -1,0 +1,41 @@
+{
+  "name": "thinkful-node-postgres-boilerplate-app",
+  "version": "1.0.0",
+  "description": "Node and PostgreSQL Boilerplate app",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --require test/setup.js --watch",
+    "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",
+    "start": "nodemon src/server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "eslint": "^7.8.1",
+    "express": "^4.16.4",
+    "helmet": "^4.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.2",
+    "path": "^0.12.7",
+    "pg": "^7.9.0",
+    "xss": "^1.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.4",
+    "postgrator": "^4.0.1",
+    "postgrator-cli": "^3.1.0",
+    "supertest": "^3.3.0",
+    "winston": "^3.3.3"
+  }
+}
