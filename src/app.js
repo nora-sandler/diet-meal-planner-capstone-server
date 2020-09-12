@@ -10,6 +10,9 @@ const errorHandler = require('./middleware/error-handler')
 const pancakeRouter = require('./pancake/pancake-router')
 const authRouter = require('./auth/auth-router')
 const usersRouter = require('./users/users-router')
+const recipesRouter = require('./recipes/recipes-router')
+const recipeDetailsRouter = require('./recipe_details/recipe-details-router')
+
 
 const app = express()
 
@@ -29,6 +32,8 @@ app.use(express.static('public'))
 app.use('/api/auth', authRouter)
 //Load user registration router
 app.use('/api/users', usersRouter)
+app.use('/api/recipes', recipesRouter)
+app.use('/api/recipe-details', recipeDetailsRouter)
 
 app.use('/api/pancakes', pancakeRouter)
 app.use(errorHandler)

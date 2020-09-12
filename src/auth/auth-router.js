@@ -8,11 +8,11 @@ authRouter
   .post('/login', jsonBodyParser, (req, res, next) => {
 
     const {
-      userName,
+      user_name,
       password
     } = req.body
     const loginUser = {
-      userName,
+      user_name,
       password
     }
 
@@ -23,7 +23,7 @@ authRouter
         })
     AuthService.getUserWithUserName(
         req.app.get('db'),
-        loginUser.userName
+        loginUser.user_name
       )
       .then(dbUser => {
         console.log('dbUser:', dbUser)

@@ -16,6 +16,7 @@ usersRouter
         })
         .catch(next)
     })
+    //register new user
     .post(jsonBodyParser, (req, res, next) => {
         const { user_name, password } = req.body
 
