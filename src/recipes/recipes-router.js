@@ -7,6 +7,7 @@ const recipeRouter = express.Router();
 const jsonParser = express.json();
 
 const serializeRecipe = (recipe) => ({
+    id:recipe.id,
     user_id: recipe.user_id,
     spoonacular_id: recipe.spoonacular_id,
     recipe_name: xss(recipe.recipe_name),

@@ -9,7 +9,7 @@ const Recipe_detailService = {
         return db
             .from('recipe_details')
             .select('*')
-            .where('recipe_detail.id', recipe_detail_id)
+            .where('recipe_details.id', recipe_detail_id)
             .first()
     },
     //relevant
@@ -22,20 +22,12 @@ const Recipe_detailService = {
                 return rows[0]
             })
     },
-    //relevant
-    updateRecipe_detail(db, recipe_detail_id, newRecipe_detail) {
-        return db('recipe_details')
-            .where({
-                id: recipe_detail_id
-            })
-            .update(newRecipe_detail, returning = true)
-            .returning('*')
-    },
+
     //relevant
     deleteRecipe_detail(db, recipe_detail_id) {
         return db('recipe_details')
             .where({
-                'id': recipe_detail_id
+                id: recipe_detail_id
             })
             .delete()
     }
