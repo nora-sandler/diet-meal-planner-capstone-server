@@ -37,43 +37,7 @@ app.use(bodyParser.json());
 //external API calls
 /////////////////////////////////////////////////////////////////////////////////////////
 
-// let getApiRecipesByDiet = function (query) {
-// 	let emitter = new events.EventEmitter();
-// 	let options = {
-//         host: 'api.spoonacular.com',
-//        // https://api.spoonacular.com/recipes/search?apiKey=6a8f8872dfcd40a3801e7a331e543a53&diet=keto
-// 		path: '/recipes/search?apiKey=6a8f8872dfcd40a3801e7a331e543a53&diet=' + query,
-// 		method: 'GET',
-// 		headers: {
-// 			'Authorization': "6a8f8872dfcd40a3801e7a331e543a53",
-// 			'Content-Type': "application/json",
-// 			'Port': 443,
-// 		}
-// 	};
 
-// 	https.get(options, function (res) {
-//         let resultsString = ""
-// 		res.on('data', function (chunk) {
-//             console.log('hello',chunk )
-//             console.log('testing',JSON.stringify(chunk))
-//             resultsString +=chunk
-//            // emitter.emit('end', JSON.parse(resultsString));
-//             emitter.emit('end', resultsString)
-//             //emitter.emit('end', chunk)
-// 		});
-// 	}).on('error', function (e) {
-// 		emitter.emit('error', e);
-// 	});
-// 	return emitter;
-// };
-
-// unirest.get(requestString)
-// .header("X-RapidAPI - KEY", API_KEY)
-// .end(function(result) {
-// 	if (result.status === 200) {
-// 		getRecipeData(result.body);
-// 	}
-// })
 
 let getApiRecipesByDiet = function (query) {
     let emitter = new events.EventEmitter();
@@ -111,6 +75,13 @@ let getApiRecipeDetailsById = function (recipeSponacularId) {
         });
     return emitter;
 };
+
+
+
+
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // local API endpoints
 /////////////////////////////////////////////////////////////////////////////////////////
