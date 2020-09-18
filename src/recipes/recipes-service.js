@@ -12,6 +12,27 @@ const RecipeService = {
             .where('recipes.id', recipes_id)
             .first()
     },
+    getDietByUserId(db, user_id) {
+        // knex raw is sql query which needs to be excuted by knex without any shortcuts (ex:.select('*') .where('recipes.id', recipes_id))
+        // joining recipe and recipe_details table
+        // input is recipe.user_id  (re.user_id = ${user_id};)
+        // table connection is recipes.spoonacular_id = recipe_details.spoonacular_id (re.spoonacular_id = rd.spoonacular_id)
+        // output is recipe_details.diet.name (rd.diet_name)
+        // The DISTINCT clause is used in the SELECT statement to remove duplicate rows from a result set.
+        return db.raw(`
+                SELECT	
+                    DISTINCT rd.diet_name
+                FROM 
+                    recipes re
+                LEFT JOIN 
+                    recipe_details rd 
+                ON 
+                    re.spoonacular_id = rd.spoonacular_id
+                WHERE 
+                    re.user_id = ${user_id};
+                `); 
+    },
+
     //relevant
     insertRecipe(db, newRecipe) {
         return db
