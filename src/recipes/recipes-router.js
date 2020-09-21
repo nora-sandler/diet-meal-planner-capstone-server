@@ -83,6 +83,34 @@ recipeRouter
     })
 
 recipeRouter
+    .route("/recipes-by-user-id/:user_id")
+    .all((req, res, next) => {
+        if (isNaN(parseInt(req.params.user_id))) {
+            return res.status(404).json({
+                error: {
+                    message: `Invalid id`,
+                },
+            });
+        }
+        RecipeService.getRecipesByDietByUserId(req.app.get("db"), req.params.user_id)
+            .then((diet) => {
+                if (!diet) {
+                    return res.status(404).json({
+                        error: {
+                            message: `Diet doesn't exist`,
+                        },
+                    });
+                }
+                res.diet = diet;
+                next();
+            })
+            .catch(next);
+    })
+    .get((req, res, next) => {
+        res.json(res.diet.rows);
+    })
+
+recipeRouter
     .route("/:recipe_id")
     .all((req, res, next) => {
         if (isNaN(parseInt(req.params.recipe_id))) {

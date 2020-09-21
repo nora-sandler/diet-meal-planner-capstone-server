@@ -86,7 +86,7 @@ let getApiRecipeDetailsById = function (recipeSponacularId) {
 // local API endpoints
 /////////////////////////////////////////////////////////////////////////////////////////
 
-app.get("/recipe-by-diet-api-data/:recipe_diet_name", function (req, res) {
+app.get("/api/recipe-by-diet-api-data/:recipe_diet_name", function (req, res) {
     //external api function call and response
     let searchReq = getApiRecipesByDiet(req.params.recipe_diet_name);
 
@@ -106,7 +106,7 @@ app.get("/recipe-by-diet-api-data/:recipe_diet_name", function (req, res) {
 
 
 
-app.get("/recipe-by-spoonacular-id-api-data/:recipe_spoonacular_id", function (req, res) {
+app.get("/api/recipe-by-spoonacular-id-api-data/:recipe_spoonacular_id", function (req, res) {
     //external api function call and response
     let searchReq = getApiRecipeDetailsById(req.params.recipe_spoonacular_id);
 
