@@ -56,6 +56,7 @@ recipe_detailRouter
             recipe_equipment,
             recipe_instruction,
         };
+        console.log(newRecipe_detail)
 
         for (const [key, value] of Object.entries(newRecipe_detail))
             if (value == null)

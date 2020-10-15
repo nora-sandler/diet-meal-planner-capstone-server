@@ -22,10 +22,10 @@ CREATE TABLE recipe_details (
     diet_name VARCHAR (255) NOT NULL,
     recipe_name VARCHAR (255) NOT NULL,
     recipe_img VARCHAR (255) NOT NULL,
-    recipe_ingredients VARCHAR (255) NOT NULL,
+    recipe_ingredients TEXT NOT NULL,
     nutrition_info VARCHAR (255) NOT NULL,
-    recipe_equipment VARCHAR (255) NOT NULL,
-    recipe_instruction VARCHAR (255) NOT NULL
+    recipe_equipment TEXT NOT NULL,
+    recipe_instruction TEXT NOT NULL
 );
 
 -- CREATE TABLE pancake (

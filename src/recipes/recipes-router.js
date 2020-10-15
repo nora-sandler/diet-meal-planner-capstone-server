@@ -47,7 +47,7 @@ recipeRouter
             .then((recipe) => {
                 res.status(201)
                     //.location(path.posix.join(req.originalUrl, `/${recipe.id}`))
-                    .json(serializeRecipe(recipe));
+                    .json(recipe);
             })
             .catch(next);
     });

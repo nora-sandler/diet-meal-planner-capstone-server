@@ -134,7 +134,7 @@ app.use("/api/users", usersRouter);
 app.use("/api/recipes", recipesRouter);
 app.use("/api/recipe-details", recipeDetailsRouter);
 
-app.use("/api/pancakes", pancakeRouter);
+
 app.use(errorHandler);
 
 module.exports = app;
