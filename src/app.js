@@ -20,17 +20,15 @@ const recipeDetailsRouter = require("./recipe_details/recipe-details-router");
 
 const app = express();
 
-const morganOption = NODE_ENV === "production" ? "tiny" : "common";
+const morganOption = (NODE_ENV === 'production')
+  ? 'tiny'
+  : 'common';
 
-app.use(
-    morgan(morganOption, {
-        skip: () => NODE_ENV === "test",
-    })
-);
+app.use(morgan(morganOption))
 app.use(cors());
 app.use(helmet());
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
 app.use(bodyParser.json());
 
 /////////////////////////////////////////////////////////////////////////////////////////
