@@ -1,7 +1,7 @@
 {
-  "name": "thinkful-node-postgres-boilerplate-app",
+  "name": "diet-meal-planner-app",
   "version": "1.0.0",
-  "description": "Node and PostgreSQL Boilerplate app",
+  "description": "For people who are following diets restrictions and need new ideas on recipes.",
   "main": "server.js",
   "scripts": {
     "test": "mocha --require test/setup.js --watch",
@@ -12,7 +12,7 @@
     "deploy": "git push heroku master"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nora Sandler",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -21,7 +21,7 @@
     "eslint": "^7.8.1",
     "express": "^4.16.4",
     "helmet": "^4.0.0",
-    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-fetch": "^3.0.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.2",
     "path": "^0.12.7",
