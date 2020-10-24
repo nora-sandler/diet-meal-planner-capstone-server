@@ -4,10 +4,15 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-//API middlewares
+//API middlewares 
+
+//equivalent of fetch in node
+const unirest = require("unirest");
+
+//helping unirest to make secure or unsecure connection
 const https = require("https");
 const http = require("http");
-const unirest = require("unirest");
+//events is helping node to store the data
 const events = require("events");
 
 const { NODE_ENV } = require("./config");

@@ -11,7 +11,7 @@ CREATE TABLE recipes (
     spoonacular_id INTEGER NOT NULL,
     recipe_name VARCHAR (255) NOT NULL,
     recipe_img  VARCHAR (255) NOT NULL
-);
+); 
 
 
 CREATE TABLE recipe_details (
