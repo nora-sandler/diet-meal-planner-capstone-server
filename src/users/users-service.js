@@ -26,6 +26,7 @@ const UsersService = {
             .then(([user]) => user)
     },
     validatePassword(password) {
+        //???????????? the last problem we had !!!!
         if (password.length < 6) {
             return 'Password must be longer than 6 characters'
         }
