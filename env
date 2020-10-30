@@ -1,9 +1,0 @@
-NODE_ENV=development
-PORT=8000
-MIGRATION_DB_HOST=localhost
-MIGRATION_DB_PORT=5432
-MIGRATION_DB_NAME=diet-meal-planner
-MIGRATION_DB_USER=postgres
-MIGRATION_DB_PASS=
-DB_URL="postgresql://postgres@localhost/diet-meal-planner"
-JWT_SECRET='abc'
