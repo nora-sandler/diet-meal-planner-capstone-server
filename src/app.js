@@ -17,7 +17,6 @@ const events = require("events");
 
 const { NODE_ENV } = require("./config");
 const errorHandler = require("./middleware/error-handler");
-const pancakeRouter = require("./pancake/pancake-router");
 const authRouter = require("./auth/auth-router");
 const usersRouter = require("./users/users-router");
 const recipesRouter = require("./recipes/recipes-router");
@@ -137,7 +136,9 @@ app.use("/api/users", usersRouter);
 app.use("/api/recipes", recipesRouter);
 app.use("/api/recipe-details", recipeDetailsRouter);
 
-
+app.get('/', (req, res) => {
+    res.send('Hello, world!')
+})
 app.use(errorHandler);
 
 module.exports = app;
