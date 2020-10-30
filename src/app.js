@@ -29,7 +29,11 @@ const morganOption = (NODE_ENV === 'development')
   : 'common';
 
 app.use(morgan(morganOption))
-app.use(cors());
+app.use(
+    cors({
+        origin: config.CLIENT_ORIGIN || 3000
+    })
+);
 app.use(helmet());
 
 // app.use(express.static("public"));
@@ -139,6 +143,16 @@ app.use("/api/recipe-details", recipeDetailsRouter);
 app.get('/', (req, res) => {
     res.send('Hello, world!')
 })
-app.use(errorHandler);
+// app.use(errorHandler);
+app.use(function errorHandler(error, req, res, next) {
+    let response
+    if (NODE_ENV != 'production') {
+        response = { error: { message: 'server error' } }
+    } else {
+        console.error(error)
+        response = { message: error.message, error }
+    }
+    res.status(500).json(response)
+})
 
 module.exports = app;
