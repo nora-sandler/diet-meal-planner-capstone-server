@@ -15,7 +15,7 @@ const http = require("http");
 //events is helping node to store the data
 const events = require("events");
 
-const { NODE_ENV } = require("./config");
+const { NODE_ENV, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./middleware/error-handler");
 const authRouter = require("./auth/auth-router");
 const usersRouter = require("./users/users-router");
@@ -31,7 +31,7 @@ const morganOption = (NODE_ENV === 'development')
 app.use(morgan(morganOption))
 app.use(
     cors({
-        origin: config.CLIENT_ORIGIN || 3000
+        origin: CLIENT_ORIGIN || 3000
     })
 );
 app.use(helmet());
