@@ -3,7 +3,7 @@ const AuthService = require('./auth-service')
 
 const authRouter = express.Router()
 const jsonBodyParser = express.json()
-//something here?..
+
 authRouter
   .post('/login', jsonBodyParser, (req, res, next) => {
 
