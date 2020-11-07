@@ -32,7 +32,7 @@ app.use(morgan(morganOption))
 app.use(cors())
 app.use(helmet());
 
-// app.use(express.static("public"));
+
 app.use(bodyParser.json());
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -139,7 +139,13 @@ app.use("/api/recipe-details", recipeDetailsRouter);
 app.get('/', (req, res) => {
     res.send('Hello, world!')
 })
+
+
+//log errors for production
 app.use(errorHandler);
+
+//log errors for development
+
 // app.use(function errorHandler(error, req, res, next) {
 //     let response
 //     if (NODE_ENV != 'production') {
