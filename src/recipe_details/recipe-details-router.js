@@ -1,7 +1,7 @@
-const path = require("path");
-const express = require("express");
-const xss = require("xss");
-const Recipe_detailService = require("./recipe-details-service");
+const path = require("path")
+const express = require("express")
+const xss = require("xss")
+const Recipe_detailService = require("./recipe-details-service")
 
 const recipe_detailRouter = express.Router();
 const jsonParser = express.json();

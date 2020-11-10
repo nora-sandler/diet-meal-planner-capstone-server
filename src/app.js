@@ -1,9 +1,9 @@
-require("dotenv").config();
-let bodyParser = require("body-parser");
-const express = require("express");
-const morgan = require("morgan");
-const cors = require("cors");
-const helmet = require("helmet");
+require("dotenv").config()
+let bodyParser = require("body-parser")
+const express = require("express")
+const morgan = require("morgan")
+const cors = require("cors")
+const helmet = require("helmet")
 //API middlewares 
 
 //equivalent of fetch in node
@@ -15,7 +15,7 @@ const http = require("http");
 //events is helping node to store the data
 const events = require("events");
 
-const { NODE_ENV } = require("./config");
+const { NODE_ENV, apiKey } = require("./config");
 const errorHandler = require("./middleware/error-handler");
 const authRouter = require("./auth/auth-router");
 const usersRouter = require("./users/users-router");
@@ -43,10 +43,10 @@ app.use(bodyParser.json());
 
 let getApiRecipesByDiet = function (query) {
     let emitter = new events.EventEmitter();
-	let requestString = `https://api.spoonacular.com/recipes/search?apiKey=6a8f8872dfcd40a3801e7a331e543a53&diet=${query}`
+	let requestString = `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&diet=${query}`
     unirest
         .get(requestString)
-        .header("Authorization", "6a8f8872dfcd40a3801e7a331e543a53")
+        .header("Authorization", apiKey)
         .end(function (result) {
             if (result.status === 200) {
 				console.log(result.body);
@@ -62,10 +62,10 @@ let getApiRecipesByDiet = function (query) {
 
 let getApiRecipeDetailsById = function (recipeSponacularId) {
     let emitter = new events.EventEmitter();
-	let requestString = `https://api.spoonacular.com/recipes/informationBulk?ids=${recipeSponacularId}&includeNutrition=true&apiKey=6a8f8872dfcd40a3801e7a331e543a53`
+	let requestString = `https://api.spoonacular.com/recipes/informationBulk?ids=${recipeSponacularId}&includeNutrition=true&apiKey=${apiKey}`
     unirest
         .get(requestString)
-        .header("Authorization", "6a8f8872dfcd40a3801e7a331e543a53")
+        .header("Authorization", apiKey)
         .end(function (result) {
             if (result.status === 200) {
 				console.log(result.body);

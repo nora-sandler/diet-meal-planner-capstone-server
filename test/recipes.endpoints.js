@@ -2,7 +2,7 @@ const knex = require('knex')
 const app = require('../src/app');
 const { makeRecipesArray, makeMaliciousRecipe } = require('./recipes.fixtures')
 
-describe(`Users API Endpoints`, () => {
+describe(`Recipes API Endpoints`, () => {
     let db;
 
     before('make knex instance', () => {
