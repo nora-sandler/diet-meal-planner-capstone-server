@@ -53,6 +53,8 @@ const RecipeService = {
                     re.spoonacular_id = rd.spoonacular_id
                 WHERE 
                     re.user_id = ${user_id}
+                GROUP BY 
+                    re.id, rd.diet_name, rd.recipe_ingredients, rd.nutrition_info, rd.recipe_equipment, rd.recipe_instruction
                 ORDER BY 
                     rd.diet_name asc; 
                 `);
