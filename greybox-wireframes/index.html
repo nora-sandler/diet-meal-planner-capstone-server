@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="widtd=device-widtd" />
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="table.css" rel="stylesheet" type="text/css" />
+    <link href="responsive.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img.jpg" alt="alt-image" />
+     </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Sign Up</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+          <li>
+            <a href="#">How it works</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="landingPage">
+      <div id="description">Description goes here</div>
+      <div id="howItWorks">How it works</div>
+    </section>
+
+    <section id="signUpPage">
+      <form action="register">
+        <h2>Sign up</h2>
+        <label for="email">Email</label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+        />
+        <label for="psw">Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="psw"
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
+      <div class="login">
+        <p>Already have an account? <a href="#">Log in here</a>.</p>
+     </div>
+    </section>
+
+    <section id="loginPage">
+      <form action="login">
+        <h2>Login</h2>
+        <label for="email">Enter email</label>
+        <input
+          type="text"
+          placeholder="Email"
+          name="email"
+          id="email"
+          required
+        />
+        <label for="psw">Enter password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          name="psw"
+          id="psw"
+          required
+        />
+        <button type="submit">Go</button>
+      </form>
+      <div class="signUp">
+        <p>Do not have an account? <a href="#">Sign up here</a>.</p>
+     </div>
+    </section>
+
+    <section id="howItWorksPage">
+      <h2>How it works</h2>
+      <div class="listOfDiets">
+        <h3>Choose your diet</h3>
+        <p>
+          Our diet list includes variety of diets and allows to choose tde diet
+          you would like to follow or already following.
+        </p>
+        <h3>List of diets</h3>
+        <ul>
+          <li>
+            <a href="#">Keto</a>
+          </li>
+          <li>
+            <a href="#">Vegetarian</a>
+          </li>
+          <li>
+            <a href="#">Paleo</a>
+          </li>
+        </ul>
+        <button type="submit">Next</button>
+     </div>
+    </section>
+
+    <section id="AddRecipesPage">
+      <h2>How it works</h2>
+      <div class="listOfMeals">
+        <h2>Choose your meal</h2>
+        <p>
+          Our app offers variety of delisious recipes which are allowed by your
+          diet plan.
+        </p>
+        <h2>List of recipes</h2>
+        <ul>
+          <li>
+            <a href="#"
+              >Recipe 1
+              <img alt="Recipe1Img" src="img.jpg" alt="alt-image"/>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >Recipe 2
+              <img alt="Recipe2Img" src="img.jpg" alt="alt-image"/>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >Recipe 3
+              <img alt="Recipe3Img" src="img.jpg" alt="alt-image" />
+            </a>
+          </li>
+        </ul>
+        <button type="submit">Next</button>
+     </div>
+    </section>
+
+    <section id="recipesDetailsPage">
+      <div class="recipesDetails">
+        <h2>Meal name</h2>
+        <h3>Ingredients</h3>
+        <div class="ingredients">
+          <ul>
+            <li>Pumpkin</li>
+            <li>Heavy cream</li>
+            <li>Onions</li>
+          </ul>
+          <select name="weekdays" id="weekdays">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wed">Wednesday</option>
+            <option value="tdur">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+          <select name="meals" id="meals">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
+          </select>
+          <button type="submit">Add</button>
+       </div>
+        <div class="equipment">
+          <p>Equipment</p>
+          <ul>
+            <li>Spoon</li>
+            <li>Knife</li>
+            <li>Fork</li>
+          </ul>
+       </div>
+        <div class="direction">
+          <h2>Direction:</h2>
+          <p>Direction goes here.</p>
+          <ul>
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+          </ul>
+       </div>
+     </div>
+    </section>
+
+    <section id="weeklyCalendarPage">
+      <div class="divTable weekly-meal-calendar">
+        <div class="divTableHeading">
+          <div class="divTableRow">
+            <div class="divTableHead">Monday</div>
+            <div class="divTableHead">Tuesday</div>
+            <div class="divTableHead">Wednesday</div>
+            <div class="divTableHead">Thursday</div>
+            <div class="divTableHead">Friday</div>
+            <div class="divTableHead">Saturday</div>
+            <div class="divTableHead">Sunday</div>
+         </div>
+       </div>
+        <div class="divTableBody">
+          <div class="divTableRow">
+            <div class="divTableCell">Breakfast</div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+         </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Lunch</div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+         </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Dinner</div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+         </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Snack</div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+            <div class="divTableCell"></div>
+         </div>
+       </div>
+     </div>
+    </section>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="#">Linkedin</a>
+        </li>
+        <li>
+          <a href="#">Gitdub</a>
+        </li>
+        <li>
+          <a href="#">Email</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

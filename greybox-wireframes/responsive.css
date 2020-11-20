@@ -1,0 +1,49 @@
+
+/* -------------------------------------
+place all the desktop styles above this line
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+place all the mobile tables styles below this line
+*/
+/*large desktop*/
+@media only screen and (max-width: 1600px) {
+    body {
+      border:  3px solid yellow;
+    }
+  }
+  
+  /*iPad lanscape / small laptop*/
+  @media only screen and (max-width: 1024px) {
+    body {
+      border:  3px solid blue;
+    }
+  }
+  
+  /*iPad potrait*/
+  @media only screen and (max-width: 768px) {
+    body {
+      border:  3px solid red;
+    }
+  }
+  
+  /*Android landscape*/
+  @media only screen and (max-width: 640px) {
+    body {
+      border:  3px solid brown;
+    }
+  }
+  
+  /*iPhone landscape*/
+  @media only screen and (max-width: 480px) {
+    body {
+      border:  3px solid green;
+    }
+  }
+  
+  /*iPhone portrait*/
+  @media only screen and (max-width: 320px) {
+    body {
+      border:  3px solid purple;
+    }
+  }
+  

@@ -1,0 +1,84 @@
+div.weekly-meal-calendar {
+  font-family: Tahoma, Geneva, sans-serif;
+  border: 2px solid #a40808;
+  background-color: #eee7db;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.divTable.weekly-meal-calendar .divTableCell,
+.divTable.weekly-meal-calendar .divTableHead {
+  border: 1px solid #aaaaaa;
+  padding: 3px 2px;
+}
+.divTable.weekly-meal-calendar .divTableBody .divTableCell {
+  font-size: 14px;
+}
+.divTable.weekly-meal-calendar .divTableRow:nth-child(even) {
+  background: #f5c8bf;
+}
+.divTable.weekly-meal-calendar .divTableHeading {
+  background: #a40808;
+  background: -moz-linear-gradient(top, #bb4646 0%, #ad2020 66%, #a40808 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #bb4646 0%,
+    #ad2020 66%,
+    #a40808 100%
+  );
+  background: linear-gradient(to bottom, #bb4646 0%, #ad2020 66%, #a40808 100%);
+  border-bottom: 1px solid #444444;
+}
+.divTable.weekly-meal-calendar .divTableHeading .divTableHead {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  border-left: 2px solid #a40808;
+}
+.divTable.weekly-meal-calendar .divTableHeading .divTableHead:first-child {
+  border-left: none;
+}
+
+.weekly-meal-calendar .tableFootStyle {
+  font-size: 13px;
+}
+.weekly-meal-calendar .tableFootStyle .links {
+  text-align: right;
+}
+.weekly-meal-calendar .tableFootStyle .links a {
+  display: inline-block;
+  background: #ffffff;
+  color: #a40808;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.weekly-meal-calendar.outerTableFooter {
+  border-top: none;
+}
+.weekly-meal-calendar.outerTableFooter .tableFootStyle {
+  padding: 3px 5px;
+}
+/* DivTable.com */
+.divTable {
+  display: table;
+}
+.divTableRow {
+  display: table-row;
+}
+.divTableHeading {
+  display: table-header-group;
+}
+.divTableCell,
+.divTableHead {
+  display: table-cell;
+}
+.divTableHeading {
+  display: table-header-group;
+}
+.divTableFoot {
+  display: table-footer-group;
+}
+.divTableBody {
+  display: table-row-group;
+}

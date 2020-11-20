@@ -1,0 +1,103 @@
+/* -------------------------------------
+CSS reset
+Is a short set of CSS rules that resets the styling of all HTML elements to a consistent baseline so the website will look the same on all browsers
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+  box-sizing: border-box;
+  /*reset Chrome user agent styles*/
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-before: 0px;
+  -webkit-padding-after: 0px;
+  -webkit-padding-start: 0px;
+  -webkit-padding-end: 0px;
+}
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules below)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {
+  border: 3px solid white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header,
+nav,
+section,
+div {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  /* background-color: #eee; */
+}
+
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: white;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  text-decoration:none;
+  color: dodgerblue;
+}
+
+a:hover{
+  color:red;
+}
+h1 {
+  text-align: center;
+  font-size: 20px;
+}
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
