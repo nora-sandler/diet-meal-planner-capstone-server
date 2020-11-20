@@ -94,6 +94,7 @@ recipeRouter
         }
         RecipeService.getRecipesByDietByUserId(req.app.get("db"), req.params.user_id)
             .then((diet) => {
+                console.log(diet, 'find diet')
                 if (!diet) {
                     return res.status(404).json({
                         error: {
