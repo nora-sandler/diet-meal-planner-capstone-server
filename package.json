@@ -1,6 +1,9 @@
 {
   "name": "diet-meal-planner-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "13.12.0"
+  },
   "description": "For people who are following diets restrictions and need new ideas on recipes.",
   "main": "server.js",
   "scripts": {
