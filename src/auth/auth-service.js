@@ -5,9 +5,13 @@ const config = require('../config')
 const AuthService = {
     getUserWithUserName(db, userName) {
         console.log('authServivce:', userName)
-        return db('users')
+        userFound = db('users')
             .where( 'user_name', userName )
             .first()
+
+        console.log("User is: ", userFound )
+
+        return userFound
     },
     comparePasswords(password, hash) {
         return bcrypt.compare(password, hash)
